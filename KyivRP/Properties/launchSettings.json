@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "KyivRP": {
+      "commandName": "Project",
+      "commandLineArgs": "ragemp-server.exe",
+      "workingDirectory": "D:\\RAGEMP\\server-files"
+    }
+  }
+}
