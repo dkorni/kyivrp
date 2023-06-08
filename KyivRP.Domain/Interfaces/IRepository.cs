@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace KyivRP.Domain.Interfaces
 {
-    internal interface IRepository<T>
+    public interface IRepository<T> where T : IEntity
     {
         Task CreateOrUpdate(T model);
 
@@ -13,6 +13,6 @@ namespace KyivRP.Domain.Interfaces
 
         Task<T> GetById(Guid id);
 
-        Task<T> Delete(T model);
+        Task Delete(T model);
     }
 }

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using KyivRP.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace KyivRP.Domain.Models
 {
-    public class Account
+    public class Account : IEntity
     {
         public Guid Id { get; set; }
 
