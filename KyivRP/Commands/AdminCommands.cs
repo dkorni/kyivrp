@@ -92,5 +92,19 @@ namespace KyivRP.Commands
         {
             NAPI.World.SetTime(hours, minutes, seconds);
         }
+
+        [Command("freeze", "/freeze player")]
+        public void Freeze(Player caller, Player target)
+        {
+            NAPI.ClientEvent.TriggerClientEvent(target, "PlayerFreeze", true);
+            target.SendChatMessage($"Ваше переміщення було заблоковано адміністратором {caller.Name}");
+        }
+
+        [Command("unfreeze", "/unfreeze player")]
+        public void Unfreeze(Player caller, Player target)
+        {
+            NAPI.ClientEvent.TriggerClientEvent(target, "PlayerFreeze", false);
+            target.SendChatMessage($"Ваше переміщення було розблоковано адміністратором {caller.Name}");
+        }
     }
 }
