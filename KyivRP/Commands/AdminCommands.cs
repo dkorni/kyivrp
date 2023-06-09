@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml.Linq;
 
-namespace KyivRP
+namespace KyivRP.Commands
 {
-    public class Commands : Script
+    public class AdminCommands : Script
     {
         [Command("veh", "/veh VehId to spawn")]
         public void CreateVeh(Player player, string vehname, int color1, int color2)
         {
             var vehhash = NAPI.Util.GetHashKey(vehname);
-            if(vehhash <= 0)
+            if (vehhash <= 0)
             {
                 player.SendChatMessage("Veh doesn't exist");
                 return;
@@ -30,7 +30,7 @@ namespace KyivRP
         {
             // check if player online
             var player = NAPI.Player.GetPlayerFromName(name);
-            if(player != null)
+            if (player != null)
             {
                 NAPI.Player.BanPlayer(player);
                 NAPI.Chat.SendChatMessageToAll($"Гравець {name} був забений довічно адміністратором {caller.Name} по причині '{reason}'.");
@@ -66,12 +66,12 @@ namespace KyivRP
             var player = NAPI.Player.GetPlayerFromName(playername);
             if (player != null)
             {
-                if (Enum.TryParse<WeaponHash>(weaponname, out WeaponHash w))
+                if (Enum.TryParse(weaponname, out WeaponHash w))
                     player.SetWeaponAmmo(w, ammo);
                 else
                     caller.SendChatMessage($"Параметр weaponname не вірний");
 
-            }  
+            }
             else
             {
                 caller.SendChatMessage($"Гравець з ніком {playername} не знайдений.");
@@ -81,7 +81,7 @@ namespace KyivRP
         [Command("setweather", "/setweather weather")]
         public void SetWeather(Player caller, string weather)
         {
-            if(Enum.TryParse<Weather>(weather, out Weather w))
+            if (Enum.TryParse(weather, out Weather w))
                 NAPI.World.SetWeather(w);
             else
                 caller.SendChatMessage($"Параметр weather не вірний, оберіть  EXTRASUNNY, CLEAR, CLOUDS, SMOG, FOGGY, OVERCAST, RAIN, THUNDER, CLEARING, NEUTRAL, SNOW, BLIZZARD, SNOWLIGHT, XMAS");

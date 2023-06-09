@@ -11,10 +11,11 @@ namespace KyivRP.EntityFramework.Infrastracture.Migrations
                 name: "Accounts",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    Id = table.Column<byte[]>(nullable: false),
                     Username = table.Column<string>(nullable: true),
                     Group = table.Column<int>(nullable: false),
-                    PasswordHash = table.Column<string>(nullable: true)
+                    PasswordHash = table.Column<string>(nullable: true),
+                    Salt = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

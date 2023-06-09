@@ -14,5 +14,9 @@ namespace KyivRP.Domain.Models
         public int Group { get; set; }
 
         public string PasswordHash { get; set; }
+
+        public string Salt { get; set; }
+
+        public string Email { get; set; }
     }
 }

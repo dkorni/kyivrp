@@ -3,14 +3,16 @@ using System;
 using KyivRP.EntityFramework.Infrastracture;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace KyivRP.EntityFramework.Infrastracture.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20230609142951_Init")]
+    partial class Init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,9 +24,6 @@ namespace KyivRP.EntityFramework.Infrastracture.Migrations
                     b.Property<byte[]>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("varbinary(16)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("text");
 
                     b.Property<int>("Group")
                         .HasColumnType("int");

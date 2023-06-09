@@ -1,6 +1,8 @@
 ﻿using System;
 using GTANetworkAPI;
 
+using Microsoft.Extensions.DependencyInjection;
+
 namespace KyivRP
 {
     public class Events : Script

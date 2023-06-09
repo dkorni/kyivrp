@@ -1,7 +1,9 @@
 ﻿using KyivRP.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace KyivRP.EntityFramework.Infrastracture
 {
@@ -51,6 +53,14 @@ namespace KyivRP.EntityFramework.Infrastracture
             using (var ctx = new DatabaseContext())
             {
                 return await ctx.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
+            }
+        }
+
+        public async Task<T> GetByPredicate(Expression<Func<T, bool>> predicate)
+        {
+            using (var ctx = new DatabaseContext())
+            {
+                return await ctx.Set<T>().FirstOrDefaultAsync(predicate);
             }
         }
     }

@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4CE49D07
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KyivRP.Integration.Tests", "KyivRP.Integration.Tests\KyivRP.Integration.Tests.csproj", "{FA12D626-F7FB-4A69-A7E8-3F48B4ECAD30}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{49E126AF-15BA-47C6-BFA7-0FD2DAAB4DB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KyivRP.Services", "KyivRP.Services\KyivRP.Services.csproj", "{9D8AC79A-08C5-436C-A5F9-E8E29757950D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,10 @@ Global
 		{FA12D626-F7FB-4A69-A7E8-3F48B4ECAD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA12D626-F7FB-4A69-A7E8-3F48B4ECAD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA12D626-F7FB-4A69-A7E8-3F48B4ECAD30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D8AC79A-08C5-436C-A5F9-E8E29757950D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D8AC79A-08C5-436C-A5F9-E8E29757950D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D8AC79A-08C5-436C-A5F9-E8E29757950D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D8AC79A-08C5-436C-A5F9-E8E29757950D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +60,7 @@ Global
 		{5A214503-9DBB-4DB2-872C-514A5CA82084} = {BF293654-890E-46D0-9F02-0348A8CD14A0}
 		{E8AB56D3-65C1-4DEE-AF99-0326F4BCF9CB} = {1E586439-897A-49BD-85CA-AEA4DEC77E04}
 		{FA12D626-F7FB-4A69-A7E8-3F48B4ECAD30} = {4CE49D07-D8C6-41D8-8F67-2B4E07C94DD2}
+		{9D8AC79A-08C5-436C-A5F9-E8E29757950D} = {49E126AF-15BA-47C6-BFA7-0FD2DAAB4DB8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F26391F9-EFAE-4F48-9653-F1F97A6B8B94}
